@@ -8,7 +8,6 @@ jest.mock('../../../database/models', () => ({
   },
 }));
 
-
 describe('authentication', () => {
   beforeEach(() => {
     User.findOne.mockReset();

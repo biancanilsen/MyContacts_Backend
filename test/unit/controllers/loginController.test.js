@@ -1,8 +1,12 @@
+const LoginController = require('../../../controllers/loginController');
 const authService = require('../../../services/authService');
 const defaultApiReturn = require('../../../utils/defaultApiReturn');
-const LoginController = require('../../../controllers/loginController');
 
-jest.mock('../../../services/authService');
+jest.mock('../../../services/authService', () => {
+  return {
+    authentication: jest.fn()
+  };
+});
 jest.mock('../../../utils/defaultApiReturn');
 
 describe('LoginController', () => {
