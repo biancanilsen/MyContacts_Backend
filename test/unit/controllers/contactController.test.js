@@ -1,9 +1,15 @@
-const { listContactsByUserId } = require('../../../controllers/contactController');
-const { createNewContact, updateContact, deleteContact } = require('../../../controllers/contactController');
+const { listContactsByUserId, createNewContact, updateContact, deleteContact } = require('../../../controllers/contactController');
 const contactService = require('../../../services/contactService');
 const defaultApiReturn = require('../../../utils/defaultApiReturn');
 
-jest.mock('../../../services/contactService');
+jest.mock('../../../services/contactService', () => {
+  return {
+    listContactsByUserId: jest.fn(),
+    createNewContact: jest.fn(),
+    updateContact: jest.fn(),
+    deleteContact: jest.fn(),
+  }
+});
 jest.mock('../../../utils/defaultApiReturn');
 jest.spyOn(console, 'error').mockImplementation(() => { });
 
