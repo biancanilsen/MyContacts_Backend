@@ -5,11 +5,13 @@ on:
     branches: [ "develop" ]
 
 jobs:
-  rodar_testes:
+  test_and_sonar_analisys:
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
         node-version: [16.x]
+
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
@@ -20,8 +22,6 @@ jobs:
     - run: npm ci
     - run: npm test
     - name: Analyze with SonarCloud
-    with:
-        fetch-depth: 0
       uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
