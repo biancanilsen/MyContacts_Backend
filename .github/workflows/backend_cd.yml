@@ -1,4 +1,4 @@
-name: Sonar Analisys & Deploy to Heroku [Main Branch]
+name: Continuous Deployment - Sonar Analisys & Deploy to Heroku on push to Main Branch
 
 on:
   push:

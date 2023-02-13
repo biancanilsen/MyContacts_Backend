@@ -1,4 +1,4 @@
-name: Continuous Integration Pipeline
+name: Continuous Integration Pipeline - Run Tests & Sonar Quality Gate Analisys 
 
 on:
   pull_request:
