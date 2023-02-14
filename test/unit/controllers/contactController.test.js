@@ -1,8 +1,8 @@
-const { listContactsByUserId, createNewContact, updateContact, deleteContact } = require('../../../controllers/contactController');
-const contactService = require('../../../services/contactService');
-const defaultApiReturn = require('../../../utils/defaultApiReturn');
+const { listContactsByUserId, createNewContact, updateContact, deleteContact } = require('../../../src/controllers/contactController');
+const contactService = require('../../../src/services/contactService');
+const defaultApiReturn = require('../../../src/utils/defaultApiReturn');
 
-jest.mock('../../../services/contactService', () => {
+jest.mock('../../../src/services/contactService', () => {
   return {
     listContactsByUserId: jest.fn(),
     createNewContact: jest.fn(),
@@ -10,7 +10,7 @@ jest.mock('../../../services/contactService', () => {
     deleteContact: jest.fn(),
   }
 });
-jest.mock('../../../utils/defaultApiReturn');
+jest.mock('../../../src/utils/defaultApiReturn');
 jest.spyOn(console, 'error').mockImplementation(() => { });
 
 describe('listContactsByUserId', () => {
