@@ -32,6 +32,7 @@ jobs:
   deploy: 
     needs: [ test_and_sonar_analisys ]
     runs-on: ubuntu-latest
+    if: github.event_name == 'push'
     steps:
         - uses: actions/checkout@v2
         - uses: akhileshns/heroku-deploy@v3.12.12
