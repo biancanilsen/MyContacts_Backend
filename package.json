@@ -12,7 +12,6 @@
   "author": "Bianca Nilsen",
   "license": "ISC",
   "devDependencies": {
-    "jest-junit": "^15.0.0",
     "nodemon": "^2.0.19"
   },
   "dependencies": {
