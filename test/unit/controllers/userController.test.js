@@ -1,8 +1,8 @@
-const UserController  = require('../../../controllers/userController');
-const userService = require('../../../services/userService');
-const defaultApiReturn = require('../../../utils/defaultApiReturn');
+const UserController  = require('../../../src/controllers/userController');
+const userService = require('../../../src/services/userService');
+const defaultApiReturn = require('../../../src/utils/defaultApiReturn');
 
-jest.mock('../../../services/userService', () => {
+jest.mock('../../../src/services/userService', () => {
   return {
     createNewUser: jest.fn()
   };

@@ -1,8 +1,8 @@
 process.env.JWT_SECRET = 'secret-key';
-const { User } = require('../../../database/models');
-const { createNewUser } = require('../../../services/userService');
+const { User } = require('../../../src/database/models');
+const { createNewUser } = require('../../../src/services/userService');
 
-jest.mock('../../../database/models', () => ({
+jest.mock('../../../src/database/models', () => ({
   User: {
     findOne: jest.fn(),
     create: jest.fn(),

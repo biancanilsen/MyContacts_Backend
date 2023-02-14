@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const routerIndex = require('./routes/index.routes');
+const routerIndex = require('./src/routes/index.routes');
 
 const app = express();
 

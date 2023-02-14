@@ -1,13 +1,13 @@
-const LoginController = require('../../../controllers/loginController');
-const authService = require('../../../services/authService');
-const defaultApiReturn = require('../../../utils/defaultApiReturn');
+const LoginController = require('../../../src/controllers/loginController');
+const authService = require('../../../src/services/authService');
+const defaultApiReturn = require('../../../src/utils/defaultApiReturn');
 
-jest.mock('../../../services/authService', () => {
+jest.mock('../../../src/services/authService', () => {
   return {
     authentication: jest.fn()
   };
 });
-jest.mock('../../../utils/defaultApiReturn');
+jest.mock('../../../src/utils/defaultApiReturn');
 
 describe('LoginController', () => {
   it('Should return status 404 if authentication fails', async () => {

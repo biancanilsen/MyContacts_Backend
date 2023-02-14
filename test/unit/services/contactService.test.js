@@ -1,8 +1,8 @@
 process.env.JWT_SECRET = 'secret-key';
-const { Contacts } = require('../../../database/models');
-const { listContactsByUserId, createNewContact, updateContact, deleteContact } = require('../../../services/contactService');;
+const { Contacts } = require('../../../src/database/models');
+const { listContactsByUserId, createNewContact, updateContact, deleteContact } = require('../../../src/services/contactService');;
 
-jest.mock('../../../database/models', () => ({
+jest.mock('../../../src/database/models', () => ({
   Contacts: {
     findAll: jest.fn(),
     create: jest.fn(),
