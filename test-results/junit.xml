@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="27" failures="0" errors="0" time="3.791">
+  <testsuite name="createNewUser" errors="0" failures="0" skipped="0" timestamp="2023-02-14T22:11:11" time="2.297" tests="2">
+    <testcase classname="createNewUser Should returns null when a user with the same email already exists" name="createNewUser Should returns null when a user with the same email already exists" time="0.011">
+    </testcase>
+    <testcase classname="createNewUser Should create a new user when the email is not in use" name="createNewUser Should create a new user when the email is not in use" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="LoginController" errors="0" failures="0" skipped="0" timestamp="2023-02-14T22:11:11" time="2.444" tests="2">
+    <testcase classname="LoginController Should return status 404 if authentication fails" name="LoginController Should return status 404 if authentication fails" time="0.033">
+    </testcase>
+    <testcase classname="LoginController Should return status 200 if authentication succeeds" name="LoginController Should return status 200 if authentication succeeds" time="0.009">
+    </testcase>
+  </testsuite>
+  <testsuite name="UserController" errors="0" failures="0" skipped="0" timestamp="2023-02-14T22:11:11" time="2.469" tests="3">
+    <testcase classname="UserController Should create a new user with the provided data" name="UserController Should create a new user with the provided data" time="0.029">
+    </testcase>
+    <testcase classname="UserController Should return an error if the email is already registered" name="UserController Should return an error if the email is already registered" time="0.004">
+    </testcase>
+    <testcase classname="UserController Should return an error if something goes wrong" name="UserController Should return an error if something goes wrong" time="0.013">
+    </testcase>
+  </testsuite>
+  <testsuite name="listContactsByUserId" errors="0" failures="0" skipped="0" timestamp="2023-02-14T22:11:11" time="2.709" tests="7">
+    <testcase classname="listContactsByUserId Should return null when no contacts are found" name="listContactsByUserId Should return null when no contacts are found" time="0.011">
+    </testcase>
+    <testcase classname="listContactsByUserId Should return the list of contacts when they are found" name="listContactsByUserId Should return the list of contacts when they are found" time="0.003">
+    </testcase>
+    <testcase classname="createNewContact Should create a new contact with the provided data" name="createNewContact Should create a new contact with the provided data" time="0.005">
+    </testcase>
+    <testcase classname="updateContact Should update an existing contact with the provided data" name="updateContact Should update an existing contact with the provided data" time="0.003">
+    </testcase>
+    <testcase classname="updateContact Should return null if the contact does not exist" name="updateContact Should return null if the contact does not exist" time="0.003">
+    </testcase>
+    <testcase classname="deleteContact Should delete a contact with the provided id and userId" name="deleteContact Should delete a contact with the provided id and userId" time="0.002">
+    </testcase>
+    <testcase classname="deleteContact Should return null if the contact with the provided id and userId doesn&apos;t exist" name="deleteContact Should return null if the contact with the provided id and userId doesn&apos;t exist" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="authentication" errors="0" failures="0" skipped="0" timestamp="2023-02-14T22:11:11" time="2.751" tests="2">
+    <testcase classname="authentication returns null when no user is found" name="authentication returns null when no user is found" time="0.014">
+    </testcase>
+    <testcase classname="authentication returns a token when a user is found" name="authentication returns a token when a user is found" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="listContactsByUserId" errors="0" failures="0" skipped="0" timestamp="2023-02-14T22:11:11" time="2.93" tests="11">
+    <testcase classname="listContactsByUserId Should return status 500 if an error occurs" name="listContactsByUserId Should return status 500 if an error occurs" time="0.007">
+    </testcase>
+    <testcase classname="listContactsByUserId Should return status 200 if there is no error" name="listContactsByUserId Should return status 200 if there is no error" time="0.002">
+    </testcase>
+    <testcase classname="createNewContact Should return status 500 if an error occurs" name="createNewContact Should return status 500 if an error occurs" time="0.003">
+    </testcase>
+    <testcase classname="createNewContact Should return staus 400 if contact already exists" name="createNewContact Should return staus 400 if contact already exists" time="0.004">
+    </testcase>
+    <testcase classname="createNewContact Should return status 201 if there is no error" name="createNewContact Should return status 201 if there is no error" time="0.002">
+    </testcase>
+    <testcase classname="updateContact Should return status 500 if an error occurs" name="updateContact Should return status 500 if an error occurs" time="0.002">
+    </testcase>
+    <testcase classname="updateContact Should return status 400 if the contact does not exist" name="updateContact Should return status 400 if the contact does not exist" time="0.002">
+    </testcase>
+    <testcase classname="updateContact Should return status 200 if there is no error" name="updateContact Should return status 200 if there is no error" time="0.001">
+    </testcase>
+    <testcase classname="deleteContact Should return status 500 if an error occurs" name="deleteContact Should return status 500 if an error occurs" time="0.002">
+    </testcase>
+    <testcase classname="deleteContact Should return status 400 if the contact does not exist" name="deleteContact Should return status 400 if the contact does not exist" time="0.002">
+    </testcase>
+    <testcase classname="deleteContact Should return status 200 if there is no error" name="deleteContact Should return status 200 if there is no error" time="0.002">
+    </testcase>
+  </testsuite>
+</testsuites>
