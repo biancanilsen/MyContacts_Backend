@@ -73,7 +73,7 @@ describe('createNewContact', () => {
     expect(defaultApiReturn).toHaveBeenCalledWith({ error: { message: 'Algo deu errado, tente novamente.' } });
   });
 
-  it('Should return staus 400 if contact already exists', async () => {
+  it('Should return an error if contact already exists', async () => {
     contactService.createNewContact.mockReturnValueOnce(false);
 
     const req = {
@@ -92,7 +92,7 @@ describe('createNewContact', () => {
       email: 'johndoe@example.com',
       userId: 1,
     });
-    expect(res.status).toHaveBeenCalledWith(400);
+    expect(res.status).toHaveBeenCalledWith(200);
     expect(defaultApiReturn).toHaveBeenCalledWith({ error: { message: 'Este contato já existe' } });
   });
 
@@ -133,7 +133,7 @@ describe('updateContact', () => {
     expect(defaultApiReturn).toHaveBeenCalledWith({ error: { message: 'Algo deu errado, tente novamente.' } });
   });
 
-  it('Should return status 400 if the contact does not exist', async () => {
+  it('SShould return an error if the contact does not exist', async () => {
     contactService.updateContact.mockReturnValueOnce(false);
 
     const req = { body: { id: 1, nome: 'John Doe', telefone: '555-555-5555', email: 'johndoe@email.com' } };
@@ -144,7 +144,7 @@ describe('updateContact', () => {
     await updateContact(req, res);
 
     expect(contactService.updateContact).toHaveBeenCalledWith({ id: 1, nome: 'John Doe', telefone: '555-555-5555', email: 'johndoe@email.com' });
-    expect(res.status).toHaveBeenCalledWith(400);
+    expect(res.status).toHaveBeenCalledWith(200);
     expect(defaultApiReturn).toHaveBeenCalledWith({ error: { message: 'Este contato não existe' } });
   });
 
@@ -180,7 +180,7 @@ describe('deleteContact', () => {
     expect(defaultApiReturn).toHaveBeenCalledWith({ error: { message: 'Algo deu errado, tente novamente.' } });
   });
 
-  it('Should return status 400 if the contact does not exist', async () => {
+  it('Should return status 200 if the contact does not exist', async () => {
     contactService.deleteContact.mockReturnValueOnce(false);
 
     const req = { tokenData: { id: 1 }, params: { id: 1 } };
@@ -191,7 +191,7 @@ describe('deleteContact', () => {
     await deleteContact(req, res);
 
     expect(contactService.deleteContact).toHaveBeenCalledWith({ id: 1, userId: 1 });
-    expect(res.status).toHaveBeenCalledWith(400);
+    expect(res.status).toHaveBeenCalledWith(200);
     expect(defaultApiReturn).toHaveBeenCalledWith({ error: { message: 'Este contato não existe' } });
   });
 
