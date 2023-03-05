@@ -18,7 +18,7 @@ npm install
 * Para rodar o back-end
 
 
-npm start
+npm run dev
 
 
 ##  Executando Testes
