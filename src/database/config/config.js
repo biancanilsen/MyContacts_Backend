@@ -18,5 +18,5 @@ module.exports = {
         database: process.env.REMOTE_DATABASE,
         jwt_secret: process.env.JWT_SECRET,
         dialect: 'mysql',
-    }
+    },
 };

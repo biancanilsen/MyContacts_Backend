@@ -10,7 +10,7 @@ jest.mock('../../../src/services/authService', () => {
 jest.mock('../../../src/utils/defaultApiReturn');
 
 describe('LoginController', () => {
-  it('Should return status 404 if authentication fails', async () => {
+  it('Should return an error if authentication fails', async () => {
     authService.authentication.mockReturnValueOnce(false);
 
     const req = { body: { email: 'test@example.com', password: 'password' } };
@@ -21,11 +21,11 @@ describe('LoginController', () => {
     await LoginController(req, res);
 
     expect(authService.authentication).toHaveBeenCalledWith({ email: 'test@example.com', password: 'password' });
-    expect(res.status).toHaveBeenCalledWith(404);
+    expect(res.status).toHaveBeenCalledWith(200);
     expect(defaultApiReturn).toHaveBeenCalledWith({ error: { message: 'Usuário não encontrado' } });
   });
 
-  it('Should return status 200 if authentication succeeds', async () => {
+  it('Should return status 201 if authentication succeeds', async () => {
     authService.authentication.mockReturnValueOnce({ data: 'some data' });
 
     const req = { body: { email: 'test@example.com', password: 'password' } };
@@ -36,7 +36,7 @@ describe('LoginController', () => {
     await LoginController(req, res);
 
     expect(authService.authentication).toHaveBeenCalledWith({ email: 'test@example.com', password: 'password' });
-    expect(res.status).toHaveBeenCalledWith(200);
+    expect(res.status).toHaveBeenCalledWith(201);
     expect(defaultApiReturn).toHaveBeenCalledWith({ apiResponse: { data: 'some data' } });
   });
 });

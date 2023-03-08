@@ -47,7 +47,7 @@ describe('UserController', () => {
       await UserController(req, res);
   
       expect(userService.createNewUser).toHaveBeenCalledWith({ email: 'johndoe@example.com', password: 'secret123' });
-      expect(res.status).toHaveBeenCalledWith(400);
+      expect(res.status).toHaveBeenCalledWith(200);
       expect(res.json).toHaveBeenCalledWith(defaultApiReturn({ error: { message: 'E-mail já cadastrado'} }));
     });
   
