@@ -5,10 +5,10 @@ const validateEmail = ( req, res, next) => {
     try {
         const { email } = req.body;
         if (!email || email!== undefined && email.length <= 0) {
-            return res.status(400).json(defaultApiReturn({ error: { message: 'O campo email não pode estar vazio'}}));
+            return res.status(200).json(defaultApiReturn({ error: { message: 'O campo email não pode estar vazio'}}));
         }
         if (!EmailIsValid(email)) {
-            return res.status(400).json(defaultApiReturn({ error: { message: 'Email inválido'}}));
+            return res.status(200).json(defaultApiReturn({ error: { message: 'Email inválido'}}));
         }
         next();  
     } catch (e) {
@@ -21,7 +21,7 @@ const validatePassword = (req, res, next) => {
     try {
         const { password } = req.body;
         if (!password || password !== undefined && password.length <= 0) {
-            return res.status(400).json(defaultApiReturn({ error: { message: 'O campo senha não pode estar vazio'}}))
+            return res.status(200).json(defaultApiReturn({ error: { message: 'O campo senha não pode estar vazio'}}))
         }
         next();
     } catch (e) {

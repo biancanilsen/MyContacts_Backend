@@ -1,4 +1,4 @@
-const defaultApiReturn = ({ apiResponse = null, error = null}) => {
+const defaultApiReturn = ({ apiResponse = {}, error = null}) => {
     return {
         apiResponse,
         errors: error ? [error] : [],
