@@ -7,7 +7,7 @@
     "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "start": "node index.js",
     "test": "jest --coverage",
-    "dev": "nodemon index.js"
+    "dev": "node index.js"
   },
   "author": "Bianca Nilsen",
   "license": "ISC",
