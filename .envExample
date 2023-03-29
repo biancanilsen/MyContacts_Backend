@@ -1,0 +1,6 @@
+DB_HOST=localhost
+DB_PORT=3306
+MYSQL_USER=mysql
+MYSQL_PASSWORD=12313
+DB_NAME=mycontacts
+JWT_SECRET=seusecret

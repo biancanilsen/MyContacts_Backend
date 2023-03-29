@@ -1,9 +1,22 @@
 const app = require('./app');
 require('dotenv').config();
+const express = require('express');
+const bodyParser = require('body-parser');
+const swaggerUi = require('swagger-ui-express');
+const routerIndex = require('./src/routes/index.routes');
+const port =  3001;
 
-const environmentPort = process.env.PORT;
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.listen(environmentPort, () => {
-    console.log(`listening on port ${environmentPort}`)
+app.use('/', routerIndex);
+
+const environmentPort = process.env.PORT
+
+app.listen(port, () => {
+    console.log(`listening on port ${port}`)
 })
+
+
+
 
