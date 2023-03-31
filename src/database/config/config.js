@@ -10,6 +10,7 @@ module.exports = {
     //     jwt_secret: process.env.JWT_SECRET,
     //     dialect: 'mysql',
     // },
+
     development: {
         host: process.env.DB_HOST,
         port: process.env.DB_PORT,
@@ -19,7 +20,6 @@ module.exports = {
         jwt_secret: process.env.JWT_SECRET,
         dialect: 'mysql',
     },
-    
     production: {
         host: process.env.REMOTE_HOST,
         username: process.env.REMOTE_USERNAME,
@@ -28,5 +28,6 @@ module.exports = {
         database: process.env.REMOTE_DATABASE,
         jwt_secret: process.env.JWT_SECRET,
         dialect: 'mysql',
+
     },
 };
