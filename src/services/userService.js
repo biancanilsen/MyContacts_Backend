@@ -1,4 +1,4 @@
-const { User } = require('../database/models');
+const { User } = require('../../database/models');
 
 const createNewUser = async ({ email, password }) => {
   const userExist = await User.findOne({ where: { email } });

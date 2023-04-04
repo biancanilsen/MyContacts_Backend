@@ -1,4 +1,4 @@
-const { Contacts } = require('../database/models');
+const { Contacts } = require('../../database/models');
 
 const listContactsByUserId = async ({ id }) => {
   try {

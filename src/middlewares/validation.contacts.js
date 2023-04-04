@@ -1,4 +1,4 @@
-const { Contacts } = require('../database/models');
+const { Contacts } = require('../../database/models');
 const defaultApiReturn = require('../utils/defaultApiReturn');
 const validator = require('validator');
 
