@@ -28,6 +28,9 @@ npm run dev
 
 npm test
 
+## Link da documentação com Swagger:
+http://localhost:3001/api-docs/#/
+
 
 ##  Link para acessar a aplicação:
 https://app-my-contact-backend.herokuapp.com/
