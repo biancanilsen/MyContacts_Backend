@@ -1,6 +1,6 @@
 # MyContacts_Backend
 ## Description
-The project consists of a REST API made with JavaScript and Node.js using Express, the ORM used is Sequelize with the Postgres database. Authentication is done using JWT. The response object returned by all API endpoints has been standardized. Unit tests were done with Jest and the API was documented using Swagger..
+The project consists of a REST API made with JavaScript and Node.js using Express, the ORM used is Sequelize with the Postgres database. Authentication is done using JWT. The response object returned by all API endpoints has been standardized. Unit tests were done with Jest and the API was documented using Swagger.The objective of the application is to be the backend of a contact book.
 
 ## Technologies used
   
