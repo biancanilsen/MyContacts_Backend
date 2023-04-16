@@ -3,10 +3,8 @@ const swaggerJsdoc = require("swagger-jsdoc");
 const cors = require('cors');
 const routerIndex = require('./src/routes/index.routes');
 const definition = require('./src/docs/swagger.doc.js');
-
 const swaggerUi = require('swagger-ui-express');
 const app = express();
-
 
 const options = {
     definition,
@@ -14,8 +12,6 @@ const options = {
 }
 
 const specs = swaggerJsdoc(options);
-
-
 
 app.use(express.json());
 app.use(cors());

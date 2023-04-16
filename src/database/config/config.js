@@ -9,6 +9,7 @@ module.exports = {
         database: process.env.DB_NAME,
         jwt_secret: process.env.JWT_SECRET,
         dialect: 'postgres',
+        synchronize: true,
     },
     production: {
         host: process.env.REMOTE_HOST,

@@ -1,12 +1,7 @@
 const app = require('./app');
 require('dotenv').config();
-
-// const environmentPort = process.env.PORT;
-
-// app.listen(environmentPort, () => {
-//     console.log(`listening on port ${environmentPort}`)
-// })
-
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, 'src', 'database', 'config', 'config.env') });
 const express = require('express');
 const bodyParser = require('body-parser');
 const swaggerUi = require('swagger-ui-express');
