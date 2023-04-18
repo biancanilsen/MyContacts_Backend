@@ -5,7 +5,7 @@ module.exports = async (req, res, next) => {
   try {
     const token = req.headers.authorization;
 
-    if (token.length === 0) {
+    if (token.length === 0 || !token || token === undefined) {
       return res.status(401).json(defaultApiReturn({ error: { message: 'Token não encontrado' } }));
     }
 
