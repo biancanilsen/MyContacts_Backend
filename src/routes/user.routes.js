@@ -29,13 +29,7 @@ const userRouter = express.Router();
  *         id: 2
  *         email: Bianca@gmail.com
  *         password: 5547992173507
- * 
- * 
  */
-
-
-
-
 userRouter.post('/register', validateEmail, validatePassword, UserController);
 userRouter.post('/login', validateEmail, validatePassword, LoginController);
 

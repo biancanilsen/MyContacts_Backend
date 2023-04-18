@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Contacts = sequelize.define('Contacts', {
+  const Contact = sequelize.define('Contact', {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -35,12 +35,12 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'contacts'
   });
 
-  Contacts.associate = (models) => {
-    Contacts.belongsTo(models.User, {
+  Contact.associate = (models) => {
+    Contact.belongsTo(models.User, {
       as: 'user',
       foreignKey: 'userId'
     });
   };
 
-  return Contacts;
+  return Contact;
 };
