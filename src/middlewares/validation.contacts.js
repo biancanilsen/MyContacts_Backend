@@ -1,4 +1,4 @@
-const { Contacts } = require('../database/models');
+const { Contact } = require('../database/models');
 const defaultApiReturn = require('../utils/defaultApiReturn');
 const validator = require('validator');
 
@@ -10,7 +10,7 @@ const validatePhone = async (req, res, next) => {
       return res.status(200).json(defaultApiReturn({ error: { message: 'Número de telefone inválido.' } }));
     }
 
-    const contactWithSamePhone = await Contacts.findOne({ where: { telefone, isActive: true } });
+    const contactWithSamePhone = await Contact.findOne({ where: { telefone, isActive: true } });
 
     if (contactWithSamePhone && contactWithSamePhone.dataValues.id !== id) {
       return res.status(200).json(defaultApiReturn({ error: { message: `Este telefone está associado ao contato: ${contactWithSamePhone.dataValues.nome}.` } }));
@@ -19,6 +19,7 @@ const validatePhone = async (req, res, next) => {
     next();
   } catch (e) {
     console.error(e.message);
+
     return res.status(500).json(defaultApiReturn({ error: { message: 'Algo deu errado, tente novamente.' } }));
   }
 }
@@ -31,14 +32,16 @@ const validateName = async (req, res, next) => {
       return res.status(200).json(defaultApiReturn({ error: { message: 'O campo Nome não pode estar vazio.' } }));
     }
 
-    const contactWithSameName = await Contacts.findOne({ where: { nome, isActive: true } });
+    const contactWithSameName = await Contact.findOne({ where: { nome, isActive: true } });
 
     if (contactWithSameName && contactWithSameName.dataValues.id !== id) {
       return res.status(200).json(defaultApiReturn({ error: { message: `Este Nome já está em uso por um dos seus contatos.` } }));
     }
+
     next();
   } catch (e) {
     console.error(e.message);
+
     return res.status(500).json(defaultApiReturn({ error: { message: 'Algo deu errado, tente novamente.' } }));
   }
 }
@@ -58,6 +61,7 @@ const validateEmail = async (req, res, next) => {
     next();
   } catch (e) {
     console.error(e.message);
+
     return res.status(500).json(defaultApiReturn({ error: { message: 'Algo deu errado, tente novamente.' } }));
   }
 }
@@ -66,13 +70,16 @@ const validateEmailIsInUseByOtherContact = async (req, res, next) => {
   try {
     const { id, email } = req.body;
 
-    const contactWithSameEmail = await Contacts.findOne({ where: { email, isActive: true } });
+    const contactWithSameEmail = await Contact.findOne({ where: { email, isActive: true } });
+
     if (contactWithSameEmail && contactWithSameEmail.dataValues.id !== id) {
       return res.status(200).json(defaultApiReturn({ error: { message: `Este E-mail está associado ao contato: ${contactWithSameEmail.dataValues.nome}.` } }));
     }
+
     next();
   } catch (e) {
     console.error(e.message);
+
     return res.status(500).json(defaultApiReturn({ error: { message: 'Algo deu errado, tente novamente.' } }));
   }
 };
