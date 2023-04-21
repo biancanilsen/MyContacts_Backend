@@ -1,33 +1,34 @@
 # MyContacts_Backend
-## Descrição
-O projeto consiste em uma API REST feita com JavaScript e Node.js utilizando o Express, o ORM utilizado é o Sequelize com o banco de dados MySQL. A autenticação é feita utilizando JWT. O objeto de resposta retornado por todos os endpoints da API foi padronizado. Os testes unitários foram feitos com Jest e a API foi documentada utilizando o Swagger.
+## Description
+The project consists of a REST API made with JavaScript and Node.js using Express, the ORM used is Sequelize with the Postgres database. Authentication is done using JWT. The response object returned by all API endpoints has been standardized. Unit tests were done with Jest and the API was documented using Swagger.The objective of the application is to be the backend of a contact book.
 
-## Tecnologias usadas
+## Technologies used
   
 Back-end:
 
-> Desenvolvido usando:  Node.js, Sequelize, Express, MySQL, JWT, Jest
+> Developed using: Node.js, Sequelize, Express, MySQL, JWT, Jest
 
-##  Instalando Dependências
+##  Installing Dependencies
 
 npm install
 
 
-##  Executando aplicação
+##  Running application
 
-* Para rodar o back-end
-
+* To run the backend
 
 npm run dev
 
 
-##  Executando Testes
+##  Running Testes
 
-* Para rodar todos os testes:
-
+* To run all tests:
 
 npm test
 
+## Link to the documentation with Swagger:
+http://localhost:3001/api-docs/#/
 
-##  Link para acessar a aplicação:
+
+##  Link to access the application:
 https://app-my-contact-backend.herokuapp.com/
