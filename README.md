@@ -17,12 +17,14 @@ npm install
 
 * To run the backend
 
+
 npm run dev
 
 
 ##  Running Testes
 
 * To run all tests:
+
 
 npm test
 
