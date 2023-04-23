@@ -9,12 +9,12 @@ module.exports = {
         database: process.env.DB_NAME,
         jwt_secret: process.env.JWT_SECRET,
         dialect: 'postgres',
-        dialectOptions: {
-            ssl: {
-                require: true,
-                rejectUnauthorized: false,
-            },
-        },
+        // dialectOptions: {
+        //     ssl: {
+        //         require: true,
+        //         rejectUnauthorized: false,
+        //     },
+        // },
         synchronize: true,
     },
     production: {
@@ -25,11 +25,11 @@ module.exports = {
         database: process.env.REMOTE_DATABASE,
         jwt_secret: process.env.JWT_SECRET,
         dialect: 'postgres',
-        dialectOptions: {
-            ssl: {
-                require: true,
-                rejectUnauthorized: false,
-            },
-        },
+        // dialectOptions: {
+        //     ssl: {
+        //         require: true,
+        //         rejectUnauthorized: false,
+        //     },
+        // },
     },
 };
