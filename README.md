@@ -29,7 +29,7 @@ npm run dev
 npm test
 
 ## Link to the documentation with Swagger:
-http://localhost:3001/api-docs/#/
+my-contacts-backend.onrender.com/api-docs/#/
 
 
 ##  Link to access the application:
