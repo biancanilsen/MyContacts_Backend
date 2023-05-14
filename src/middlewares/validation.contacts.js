@@ -6,7 +6,7 @@ const validatePhone = async (req, res, next) => {
   try {
     const { id, telefone } = req.body;
 
-    if (telefone.toString().trim().length !== 11) {
+    if (telefone.toString().trim().length !== 18) {
       return res.status(200).json(defaultApiReturn({ error: { message: 'Número de telefone inválido.' } }));
     }
 
