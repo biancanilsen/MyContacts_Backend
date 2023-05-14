@@ -13,8 +13,8 @@ const definition = {
         description: 'Projeto de gerenciamento de contatos',
         contact: {
             name: 'Bianca Nilsen',
-            email: 'son.hoang01@gmail.com',
-            url: 'seu git ou link'
+            email: 'nilsenn.bianca@gmail.com',
+            url: 'https://github.com/biancanilsen'
         },
         license: {
             name: 'Apache 2.0',
@@ -32,7 +32,7 @@ const definition = {
     },
     servers: [
         {
-            url: "http://localhost:3001",
+            url: "https://my-contacts-backend.onrender.com",
         },
     ],
 
